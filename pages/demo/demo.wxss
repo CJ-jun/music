@@ -1,0 +1,5 @@
+/* pages/demo/demo.wxss */
+scroll-view{
+  height: 400rpx;
+  background: red;
+}

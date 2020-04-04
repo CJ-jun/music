@@ -1,0 +1,120 @@
+<!--pages/music/music.wxml-->
+
+<!-- 标签 -->
+<view class="tab">
+  <view class="tab-item {{item=='0'?'active':''}}" bindtap="changeItem" data-item="0">音乐推荐</view>
+  <view class="tab-item {{item=='1'?'active':''}}" bindtap="changeItem" data-item="1">播发器</view>
+  <view class="tab-item {{item=='2'?'active':''}}" bindtap="changeItem" data-item="2">播放列表</view>
+</view>
+<!-- 内容 -->
+<view class="content">
+  <swiper current="{{item}}" bindchange="changeTab">
+    <swiper-item>
+      <!-- 音乐推荐的内容 -->
+      <scroll-view class="content-info" scroll-y>
+        <swiper class="content-info-slide" indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" autoplay circular>
+          <swiper-item>
+            <image src="../images/banner.jpg"></image>
+          </swiper-item>
+          <swiper-item>
+            <image src="../images/banner.jpg"></image>
+          </swiper-item>
+          <swiper-item>
+            <image src="../images/banner.jpg"></image>
+          </swiper-item>
+        </swiper>
+        <view class="content-info-portal">
+          <view>
+            <image src="../images/04.png"></image>
+            <text>私人FM</text>
+          </view>
+          <view>
+            <image src="../images/05.png"></image>
+            <text>每日歌曲推荐</text>
+          </view>
+          <view>
+            <image src="../images/06.png"></image>
+            <text>云音乐新歌</text>
+          </view>
+        </view>
+        <!-- 热门音乐 -->
+        <view class="content-info-list">
+          <view class="list-title">热门音乐</view>
+          <view class="list-inner">
+            <view class="list-item">
+              <image src="../images/cover.jpg"></image>
+              <view>五月之歌</view>
+            </view>
+            <view class="list-item">
+              <image src="../images/cover.jpg"></image>
+              <view>五月之歌</view>
+            </view>
+            <view class="list-item">
+              <image src="../images/cover.jpg"></image>
+              <view>五月之歌</view>
+            </view>
+            <view class="list-item">
+              <image src="../images/cover.jpg"></image>
+              <view>五月之歌</view>
+            </view>
+            <view class="list-item">
+              <image src="../images/cover.jpg"></image>
+              <view>五月之歌</view>
+            </view>
+            <view class="list-item">
+              <image src="../images/cover.jpg"></image>
+              <view>五月之歌</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <!-- 播放器的内容 -->
+    <swiper-item class="content-play">
+      <view class="content-play-info">
+        <text>{{play.title}}</text>
+        <view>------{{play.singer}}------</view>
+      </view>
+      <view class="content-play-cover">
+        <image src="{{play.coverImgUrl}}" style="animation-play-state:{{state}}"></image>
+      </view>
+      <view class="content-play-progress">
+        <text>{{play.currentTime}}</text>
+        <view>
+          <slider block-size="12" activeColor="#d33a31" value="{{play.percent}}" bindchange="slideChange"></slider>
+        </view>
+
+        <text>{{play.duration}}</text>
+      </view>
+    </swiper-item>
+    <!-- 播放列表内容-->
+    <swiper-item>
+      <scroll-view scroll-y class="content-playList">
+        <view class="playList-item" wx:for="{{playList}}" wx:key="index" bindtap="change"data-index="{{index}}">
+          <image class="playList-cover" src="{{item.coverImgUrl}}"></image>
+          <view class="playList-info">
+            <view class="playList-info-title">{{item.title}}</view>
+            <view class="playList-info-singer">{{item.singer}}</view>
+          </view>
+          <view class="playList-controls">
+            <text wx:if="{{index==playIndex}}">正在播放</text>
+          </view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 播放器的底部 -->
+<view class="player">
+  <image class="player-cover" src="{{play.coverImgUrl}}"></image>
+  <view class="player-info">
+    <view class="play-info-title">{{play.title}}</view>
+    <view class="play-info-singer">{{play.singer}}</view>
+  </view>
+  <view class="player-controls">
+    <image src="../images/01.png" bindtap="changePage"></image>
+    <image wx:if="{{state =='paused'}}" src="../images/02.png" bindtap="play"></image>
+    <image wx:else src="../images/02.png" bindtap="pause"></image>
+    <image src="../images/03.png" bindtap="next"></image>
+  </view>
+</view>

@@ -1,0 +1,51 @@
+<!--pages/demo/demo.wxml-->
+<text>swiper用法</text>
+<swiper indicator-dots="white" indicator-active-color="red" autoplay current="1">
+  <swiper-item style="background:#ccc">1</swiper-item>
+  <swiper-item style="background:#ddd">2</swiper-item>
+  <swiper-item style="background:#eee">3</swiper-item>
+</swiper>
+<text>scroll-view</text>
+<scroll-view scroll-y>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+<view>fsdgdfgsdfhsdfgjfgdjdddh</view>
+</scroll-view>
+<view>audioCtx对象使用，不需要写标签</view>
+<view>slider组件</view>
+<view bindchange="sliderChange"></view>
